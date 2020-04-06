@@ -1713,6 +1713,12 @@ class Step(BasicStatement, Replayable):
        The line number of the *feature file* where the step was found.
 
     .. _`step`: gherkin.html#steps
+
+    .. attribute:: embeddings
+
+       The embeddings that will be embedded to the reports
+
+    .. _`step`: gherkin.html#steps
     """
     type = "step"
 
@@ -1726,6 +1732,7 @@ class Step(BasicStatement, Replayable):
         self.status = Status.untested
         self.hook_failed = False
         self.duration = 0
+        self.embeddings = []
 
     def reset(self):
         """Reset temporary runtime data to reach clean state again."""

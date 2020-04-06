@@ -112,6 +112,7 @@ class JSONFormatter(Formatter):
             "step_type": step.step_type,
             "name": step.name,
             "location": six.text_type(step.location),
+            "embeddings": step.embeddings,
         }
 
         if step.text:
